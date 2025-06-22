@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Badgerland Products, Inc.</title>
+    <meta name="description" content="Discover the story, mission, and expert team behind Badgerland Products, Wisconsin's premier commercial printer.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Animate.css (for WOW.js) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-brand-indigo text-brand-silver font-sans">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 p-6 md:p-8 flex justify-between items-center header-solid">
+        <a href="index.html" class="logo text-2xl font-bold tracking-widest uppercase z-50">
+            Badgerland<span class="text-brand-amber">.</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden z-50 text-2xl">
+            <i class="fas fa-bars" id="menu-open-icon"></i>
+            <i class="fas fa-times hidden" id="menu-close-icon"></i>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav id="mobile-menu" class="mobile-nav-menu">
+            <ul class="flex flex-col md:flex-row gap-8 md:gap-10 text-xl md:text-base font-medium">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ABOUT HERO -->
+        <section class="pt-32 md:pt-48 pb-16 md:pb-24">
+            <div class="container mx-auto px-6 md:px-12 text-center">
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-white wow animate__animated animate__fadeInDown">The Art of the Impression.</h1>
+                <p class="mt-6 text-lg text-brand-silver max-w-2xl mx-auto wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    We believe print is more than ink on paper—it's a tangible connection, a lasting statement, and a powerful tool for growth.
+                </p>
+            </div>
+        </section>
+
+        <!-- HISTORY AND MISSION SECTION -->
+        <section class="py-20 md:py-32 bg-brand-purple/10 relative overflow-hidden">
+            <div class="blob-shape-2"></div>
+            <div class="container mx-auto px-6 md:px-12 relative">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="wow animate__animated animate__fadeInLeft">
+                        <img src="images/13.jpg" alt="Inside the Badgerland Products workshop" class="rounded-lg shadow-2xl">
+                    </div>
+                     <div class="wow animate__animated animate__fadeInRight" data-wow-delay="0.2s">
+                        <h2 class="section-title">Our Story</h2>
+                        <p class="mt-6 mb-8 leading-relaxed">
+                            Founded on a commitment to craft, Badgerland Products began with a single press and a simple mission: to provide Wisconsin businesses with printing they could be proud of. Through years of dedication, we've grown into a full-service commercial printer, but our core values remain unchanged. We are driven by a passion for quality and a dedication to partnership.
+                        </p>
+                        <h3 class="text-2xl font-serif text-white font-bold mb-4">Our Mission</h3>
+                        <p class="border-l-4 border-brand-amber pl-4">To empower our clients' success by delivering exceptional print products and expert guidance, ensuring every project makes a powerful and lasting impression.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+     
+
+    <!-- FOOTER -->
+    <footer class="py-16">
+        <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h4 class="font-bold uppercase tracking-wider">Location</h4>
+                <p class="mt-2 text-sm">145 Industrial Drive<br>Twin Lakes, WI 53181</p>
+            </div>
+            <div>
+                <h4 class="font-bold uppercase tracking-wider">Contact</h4>
+                <a href="mailto:administrator@badgerlandproductsinc.com" class="block mt-2 text-sm hover:text-brand-amber">administrator@badgerlandproductsinc.com</a>
+            </div>
+             <div>
+                <h4 class="font-bold uppercase tracking-wider">Hours</h4>
+                <p class="mt-2 text-sm">Mon - Fri: 8:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+        <div class="text-center text-xs text-brand-silver/50 mt-12 pt-8 border-t border-brand-purple/20">
+            <p>&copy; <span id="year"></span> Badgerland Products, Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script/script.js"></script>
+</body>
+</html>

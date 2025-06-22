@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Badgerland Products, Inc.</title>
+    <meta name="description" content="Explore the comprehensive printing services offered by Badgerland Products, from digital and offset printing to large format and custom finishing.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Animate.css (for WOW.js) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-brand-indigo text-brand-silver font-sans">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 p-6 md:p-8 flex justify-between items-center header-solid">
+        <a href="index.html" class="logo text-2xl font-bold tracking-widest uppercase z-50">
+            Badgerland<span class="text-brand-amber">.</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden z-50 text-2xl">
+            <i class="fas fa-bars" id="menu-open-icon"></i>
+            <i class="fas fa-times hidden" id="menu-close-icon"></i>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav id="mobile-menu" class="mobile-nav-menu">
+            <ul class="flex flex-col md:flex-row gap-8 md:gap-10 text-xl md:text-base font-medium">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SERVICES HERO -->
+        <section class="pt-32 md:pt-48 pb-16 md:pb-24">
+            <div class="container mx-auto px-6 md:px-12 text-center">
+                <h1 class="text-5xl md:text-7xl font-serif font-bold text-white wow animate__animated animate__fadeInDown">Capabilities</h1>
+                <p class="mt-6 text-lg text-brand-silver max-w-2xl mx-auto wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                    A detailed look into our suite of printing solutions, designed to bring any vision to life with precision and vibrancy.
+                </p>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE SERVICES TABS -->
+        <section class="py-12 md:pb-32">
+            <div class="container mx-auto px-6 md:px-12 max-w-6xl">
+                <!-- Tab Navigation -->
+                <div class="border-b border-brand-purple wow animate__animated animate__fadeIn" data-wow-delay="0.3s">
+                    <nav id="service-tabs" class="flex space-x-4 md:space-x-8 -mb-px">
+                        <a href="#commercial" class="tab-link active">Commercial Printing</a>
+                        <a href="#large-format" class="tab-link">Large Format</a>
+                        <a href="#finishing" class="tab-link">Finishing</a>
+                        <a href="#promotional" class="tab-link">Promotional</a>
+                    </nav>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="mt-12">
+                    <!-- Commercial Printing Content -->
+                    <div id="commercial" class="tab-content active wow animate__animated animate__fadeInUp">
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <img src="images/17.jpg" alt="Commercial printing products" class="rounded-lg order-2 lg:order-1">
+                            <div class="order-1 lg:order-2">
+                                <h3 class="text-3xl font-serif text-white font-bold">Commercial Printing</h3>
+                                <p class="mt-4">The core of our business. We handle a vast range of standard printing needs with both digital and offset presses to ensure the perfect balance of speed, quality, and cost-effectiveness for your project.</p>
+                                <ul class="mt-6 space-y-2 list-disc list-inside">
+                                    <li>Business Cards & Letterhead</li>
+                                    <li>Brochures, Flyers & Postcards</li>
+                                    <li>Catalogs & Booklets</li>
+                                    <li>Forms & Envelopes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Large Format Content -->
+                    <div id="large-format" class="tab-content">
+                         <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <img src="images/18.jpg" alt="Large format banner" class="rounded-lg order-2 lg:order-1">
+                            <div class="order-1 lg:order-2">
+                                <h3 class="text-3xl font-serif text-white font-bold">Large Format</h3>
+                                <p class="mt-4">Make a big statement. Our large format printing services are perfect for creating high-impact visuals for indoor and outdoor use, all printed on durable, high-quality materials.</p>
+                                <ul class="mt-6 space-y-2 list-disc list-inside">
+                                    <li>Vinyl Banners & Signage</li>
+                                    <li>Posters & Event Graphics</li>
+                                    <li>Window & Wall Decals</li>
+                                    <li>Trade Show Displays</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Finishing Content -->
+                    <div id="finishing" class="tab-content">
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <img src="images/19.jpg" alt="Book binding and finishing" class="rounded-lg order-2 lg:order-1">
+                            <div class="order-1 lg:order-2">
+                                <h3 class="text-3xl font-serif text-white font-bold">Finishing & Binding</h3>
+                                <p class="mt-4">The final details make all the difference. Our comprehensive in-house finishing services give your project a professional, polished look that elevates it from standard to stunning.</p>
+                                <ul class="mt-6 space-y-2 list-disc list-inside">
+                                    <li>Laminating & UV Coating</li>
+                                    <li>Die Cutting & Foil Stamping</li>
+                                    <li>Saddle Stitching & Perfect Binding</li>
+                                    <li>Folding & Scoring</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Promotional Content -->
+                    <div id="promotional" class="tab-content">
+                         <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <img src="images/20.jpg" alt="Branded promotional products" class="rounded-lg order-2 lg:order-1">
+                            <div class="order-1 lg:order-2">
+                                <h3 class="text-3xl font-serif text-white font-bold">Promotional Products</h3>
+                                <p class="mt-4">Extend your brand's reach beyond paper. We can source and customize a wide variety of promotional items, putting your logo and message directly into the hands of your customers.</p>
+                                <ul class="mt-6 space-y-2 list-disc list-inside">
+                                    <li>Apparel & T-Shirts</li>
+                                    <li>Mugs & Drinkware</li>
+                                    <li>Pens & Office Supplies</li>
+                                    <li>Tote Bags & More</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-16">
+        <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h4 class="font-bold uppercase tracking-wider">Location</h4>
+                <p class="mt-2 text-sm">145 Industrial Drive<br>Twin Lakes, WI 53181</p>
+            </div>
+            <div>
+                <h4 class="font-bold uppercase tracking-wider">Contact</h4>
+                <a href="mailto:administrator@badgerlandproductsinc.com" class="block mt-2 text-sm hover:text-brand-amber">administrator@badgerlandproductsinc.com</a>
+            </div>
+             <div>
+                <h4 class="font-bold uppercase tracking-wider">Hours</h4>
+                <p class="mt-2 text-sm">Mon - Fri: 8:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+        <div class="text-center text-xs text-brand-silver/50 mt-12 pt-8 border-t border-brand-purple/20">
+            <p>&copy; <span id="year"></span> Badgerland Products, Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script/script.js"></script>
+</body>
+</html>

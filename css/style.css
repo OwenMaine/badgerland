@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@700&display=swap');
+
+/*
+  font-family: 'Oswald', sans-serif;  -- Headings
+  font-family: 'Lato', sans-serif;    -- Body
+*/
+
+:root {
+    --brand-indigo: #2c2a4a;
+    --brand-purple: #4f4a7c;
+    --brand-amber: #ffaf00;
+    --brand-silver: #C0C0C0;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--brand-indigo);
+    background-image: linear-gradient(135deg, var(--brand-indigo) 0%, var(--brand-purple) 100%);
+    color: var(--brand-silver);
+}
+.font-sans { font-family: 'Lato', sans-serif; }
+.font-serif { font-family: 'Oswald', sans-serif; } /* Using serif class for Oswald */
+
+/* Header & Navigation */
+.logo { color: white; }
+.text-brand-amber { color: var(--brand-amber); }
+#mobile-menu-button { color: white; }
+
+.nav-link {
+    position: relative;
+    padding-bottom: 8px;
+    color: white;
+    transition: color 0.3s;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.nav-link:hover { color: var(--brand-amber); }
+.nav-link.active { color: var(--brand-amber); }
+
+/* --- UNIQUE HERO SLIDER --- */
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.hero-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+.slide-titles-container {
+    position: relative;
+    height: 200px; /* Adjust based on largest title */
+}
+.slide-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5rem;
+    line-height: 1;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+.slide-title.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (max-width: 768px) {
+    .slide-title { font-size: 3rem; }
+    .slide-titles-container { height: 120px; }
+}
+.slider-nav {
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+}
+.slider-nav-item {
+    background-color: transparent;
+    border: none;
+    color: var(--brand-silver);
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    padding-right: 2rem;
+    transition: color 0.3s ease;
+}
+.slider-nav-item:hover { color: white; }
+.slider-nav-item.active { color: var(--brand-amber); font-weight: 700; }
+.slider-nav-item.active::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: var(--brand-amber);
+}
+
+/* Other Sections */
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: white;
+}
+.blob-shape-1 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: var(--brand-purple);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    top: -50px;
+    right: -100px;
+    opacity: 0.1;
+    animation: morph 8s ease-in-out infinite;
+}
+@keyframes morph {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+.about-image-card {
+    background-color: var(--brand-purple)/50;
+    padding: 1rem;
+    border: 1px solid var(--brand-purple);
+    transform: rotate(3deg);
+}
+.about-image-card img {
+    width: 100%;
+    height: auto;
+    transform: rotate(-5deg);
+}
+
+/* What We Do - Service Card */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--brand-purple);
+}
+.service-card-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.service-card:hover .service-card-img {
+    transform: scale(1.1);
+}
+.service-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 1.5rem 1.5rem;
+    background: linear-gradient(to top, rgba(44, 42, 74, 1), transparent);
+}
+.service-card-title {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Project Gallery */
+.gallery-item {
+    overflow: hidden;
+    border: 3px solid var(--brand-purple);
+}
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* FAQ Section */
+.faq-item {
+    border-bottom: 1px solid var(--brand-purple);
+}
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+.faq-question:hover {
+    color: var(--brand-amber);
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    padding-left: 1rem;
+    color: var(--brand-silver);
+}
+.faq-item.active .faq-answer {
+    padding-bottom: 1.5rem;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--brand-amber);
+    color: var(--brand-indigo);
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    border: 2px solid var(--brand-amber);
+    transition: all 0.3s;
+}
+.cta-button:hover {
+    background-color: transparent;
+    color: var(--brand-amber);
+}
+
+/* RESPONSIVE NAVIGATION STYLES */
+.mobile-nav-menu {
+    position: fixed;
+    transform: translateX(100%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 42, 74, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 40;
+}
+.mobile-nav-menu.menu-open {
+    transform: translateX(0);
+}
+@media (min-width: 768px) {
+    .mobile-nav-menu {
+        position: static;
+        transform: translateX(0);
+        background-color: transparent;
+        backdrop-filter: none;
+        width: auto;
+        height: auto;
+        display: block;
+        z-index: auto;
+    }
+}
+
+/* ========================================= */
+/* === ADDITIONAL STYLES FOR ABOUT.HTML === */
+/* ========================================= */
+
+/* Solid header for pages without full-screen hero */
+header.header-solid {
+    background-color: var(--brand-indigo);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Organic blob shape for the background */
+.blob-shape-2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: var(--brand-indigo);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    bottom: -100px;
+    left: -150px;
+    opacity: 0.2;
+    animation: morph2 10s ease-in-out infinite alternate;
+}
+@keyframes morph2 {
+    0% { transform: rotate(0deg); border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    100% { transform: rotate(360deg); border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+/* Team Section Styles */
+.team-card {
+    position: relative;
+    text-align: center;
+}
+.team-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 120%; /* Creates a taller aspect ratio */
+    overflow: hidden;
+    border: 1px solid var(--brand-purple);
+}
+.team-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.team-card:hover .team-image-wrapper img {
+    transform: scale(1.1);
+}
+.team-info {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: var(--brand-indigo);
+    border: 1px solid var(--brand-purple);
+    padding: 1rem;
+    transition: bottom 0.4s ease;
+}
+.team-card:hover .team-info {
+    bottom: 20px;
+}
+.team-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+.team-title {
+    color: var(--brand-amber);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+/* =========================================== */
+/* === ADDITIONAL STYLES FOR SERVICES.HTML === */
+/* =========================================== */
+
+/* Service Tab Navigation */
+.tab-link {
+    display: inline-block;
+    padding: 0.75rem 0.25rem;
+    margin-bottom: -1px; /* Aligns with the container's border */
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--brand-silver);
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.tab-link:hover {
+    color: white;
+}
+
+.tab-link.active {
+    color: var(--brand-amber);
+    border-bottom-color: var(--brand-amber);
+}
+
+@media (min-width: 768px) {
+    .tab-link {
+        padding: 1rem 0.5rem;
+        font-size: 1.25rem;
+    }
+}
+
+/* Service Tab Content Panes */
+.tab-content {
+    display: none; /* Hidden by default */
+}
+
+.tab-content.active {
+    display: block; /* Shown when active */
+}
+
+/* =========================================== */
+/* === ADDITIONAL STYLES FOR CONTACT.HTML === */
+/* =========================================== */
+
+.blob-shape-3 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-color: var(--brand-purple);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0.1;
+    animation: morph 12s ease-in-out infinite alternate;
+}
+
+.contact-details-card {
+    background-color: rgba(79, 74, 124, 0.2);
+    border: 1px solid var(--brand-purple);
+    padding: 2rem;
+    border-radius: 8px;
+    space-y: 1.5rem; /* Note: Use gap in flexbox instead if preferred */
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-map-container {
+    position: relative;
+    border: 1px solid var(--brand-purple);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contact-map-container iframe {
+    width: 100%;
+    height: 300px;
+    filter: grayscale(100%) contrast(1.1) invert(1);
+    opacity: 0.8;
+}
+
+.contact-form-card {
+    background-color: rgba(44, 42, 74, 0.5); /* Semi-transparent indigo */
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--brand-purple);
+    padding: 2.5rem;
+    border-radius: 8px;
+}
+
+.contact-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--brand-silver);
+}
+
+.contact-input {
+    width: 100%;
+    background-color: rgba(79, 74, 124, 0.2);
+    border: 1px solid var(--brand-purple);
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+    outline: none;
+    border-color: var(--brand-amber);
+    box-shadow: 0 0 0 2px rgba(255, 175, 0, 0.4);
+    background-color: var(--brand-purple);
+}
+
+textarea.contact-input {
+    resize: vertical;
+}

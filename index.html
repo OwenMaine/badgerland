@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badgerland Products, Inc. | Premier Commercial Printing</title>
+    <meta name="description" content="Badgerland Products in Twin Lakes, WI, offers top-notch commercial printing services, from business cards to banners, with quality and speed.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Animate.css (for WOW.js) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-brand-indigo text-brand-silver font-sans">
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 p-6 md:p-8 flex justify-between items-center">
+        <a href="index.html" class="logo text-2xl font-bold tracking-widest uppercase z-50">
+            Badgerland<span class="text-brand-amber">.</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden z-50 text-2xl">
+            <i class="fas fa-bars" id="menu-open-icon"></i>
+            <i class="fas fa-times hidden" id="menu-close-icon"></i>
+        </button>
+
+        <!-- Navigation Menu -->
+        <nav id="mobile-menu" class="mobile-nav-menu">
+            <ul class="flex flex-col md:flex-row gap-8 md:gap-10 text-xl md:text-base font-medium">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- UNIQUE HERO SLIDER -->
+        <section id="hero-slider" class="min-h-screen relative overflow-hidden text-white flex items-center">
+            <!-- Slides Container -->
+            <div class="absolute inset-0 z-0">
+                <div class="hero-slide active" style="background-image: url('images/1.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('images/2.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('images/3.jpg');"></div>
+                <!-- CORRECTED OVERLAY: Changed from a complex gradient to a simple, more effective dark overlay -->
+                <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+
+            <!-- Content Container -->
+            <div class="container mx-auto px-6 md:px-12 relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-3">
+                    <div class="md:col-span-2">
+                        <div class="slide-titles-container">
+                            <h1 class="slide-title active">Banners &<br>Large Format</h1>
+                            <h1 class="slide-title">Business Cards<br>& Stationery</h1>
+                            <h1 class="slide-title">Brochures &<br>Marketing Materials</h1>
+                        </div>
+                        <p class="mt-4 text-lg text-brand-silver max-w-lg">
+                            We bring your brand to life with vibrant, high-quality printing solutions tailored to your needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Slider Navigation -->
+            <nav class="slider-nav">
+                <button class="slider-nav-item active" data-slide="0">Banners</button>
+                <button class="slider-nav-item" data-slide="1">Business Cards</button>
+                <button class="slider-nav-item" data-slide="2">Brochures</button>
+            </nav>
+        </section>
+
+        <!-- ABOUT (BRIEF) -->
+        <section class="py-20 md:py-32 relative overflow-hidden">
+             <div class="blob-shape-1"></div>
+            <div class="container mx-auto px-6 md:px-12 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="wow animate__animated animate__fadeInLeft">
+                        <h2 class="section-title">Print, With<br>Personality.</h2>
+                        <p class="mt-6 leading-relaxed">
+                            Based in Twin Lakes, Wisconsin, Badgerland Products is your premier partner for commercial printing. We merge cutting-edge technology with a passion for print to deliver an expansive array of services. From essential business cards to eye-catching banners, we guarantee top-notch quality with a rapid turnaround time, ensuring your business always looks its best.
+                        </p>
+                    </div>
+                    <div class="flex justify-center wow animate__animated animate__fadeInRight" data-wow-delay="0.2s">
+                        <div class="about-image-card">
+                            <img src="images/4.jpg" alt="A printing press in action">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT WE DO SECTION -->
+        <section class="py-20 md:py-32 bg-brand-purple/10">
+            <div class="container mx-auto px-6 md:px-12">
+                <div class="text-center wow animate__animated animate__fadeInDown">
+                    <h2 class="section-title">What We Do</h2>
+                    <p class="mt-4 max-w-2xl mx-auto">A glimpse into our comprehensive printing capabilities.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+                        <img src="images/9.jpg" class="service-card-img" alt="Offset Printing Press">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">Offset Printing</h3>
+                        </div>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                        <img src="images/10.jpg" class="service-card-img" alt="Digital Printing Machine">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">Digital Printing</h3>
+                        </div>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+                        <img src="images/11.jpg" class="service-card-img" alt="Large Format Banner Printer">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">Large Format</h3>
+                        </div>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="service-card wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                        <img src="images/12.jpg" class="service-card-img" alt="Binding and Finishing equipment">
+                        <div class="service-card-content">
+                            <h3 class="service-card-title">Finishing & Binding</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- PROJECT GALLERY -->
+        <section class="py-20 md:py-32">
+            <div class="container mx-auto px-6 md:px-12">
+                 <div class="text-center wow animate__animated animate__fadeInDown">
+                    <h2 class="section-title">Our Work</h2>
+                    <p class="mt-4 max-w-2xl mx-auto">A portfolio of print perfection.</p>
+                </div>
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="gallery-item wow animate__animated animate__zoomIn"><img src="images/5.jpg" alt="Gallery image 1"></div>
+                    <div class="gallery-item wow animate__animated animate__zoomIn" data-wow-delay="0.1s"><img src="images/6.jpg" alt="Gallery image 2"></div>
+                    <div class="gallery-item wow animate__animated animate__zoomIn" data-wow-delay="0.2s"><img src="images/7.jpg" alt="Gallery image 3"></div>
+                    <div class="gallery-item wow animate__animated animate__zoomIn" data-wow-delay="0.3s"><img src="images/8.jpg" alt="Gallery image 4"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="py-20 md:py-32 bg-brand-purple/10">
+            <div class="container mx-auto px-6 md:px-12 max-w-4xl">
+                <div class="text-center wow animate__animated animate__fadeInDown">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+                <div class="mt-16 faq-container wow animate__animated animate__fadeInUp">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question">What is the typical turnaround time?</button>
+                        <div class="faq-answer">Our standard turnaround is 3-5 business days for most projects, but this can vary based on complexity and quantity. We also offer expedited services for urgent requests.</div>
+                    </div>
+                    <!-- FAQ 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question">What file formats do you accept?</button>
+                        <div class="faq-answer">We prefer high-resolution PDF files with bleed and crop marks. We also accept Adobe Illustrator (.ai), Photoshop (.psd), and InDesign (.indd) files. Please contact us if you have a different format.</div>
+                    </div>
+                    <!-- FAQ 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question">Can you help with graphic design?</button>
+                        <div class="faq-answer">Yes, we have an in-house team of graphic designers who can help bring your vision to life, from minor adjustments to creating a full brand identity from scratch.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="py-24 text-center">
+             <div class="container mx-auto px-6 md:px-12 wow animate__animated animate__zoomIn">
+                <h2 class="text-5xl font-serif font-bold text-white">Ready to Print?</h2>
+                <p class="max-w-xl mx-auto mt-4 mb-8 text-brand-silver">Let's turn your ideas into tangible, high-quality products. Get in touch for a custom quote.</p>
+                <a href="#" class="cta-button">Start Your Project</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-16">
+        <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h4 class="font-bold uppercase tracking-wider">Location</h4>
+                <p class="mt-2 text-sm">145 Industrial Drive<br>Twin Lakes, WI 53181</p>
+            </div>
+            <div>
+                <h4 class="font-bold uppercase tracking-wider">Contact</h4>
+                <a href="mailto:administrator@badgerlandproductsinc.com" class="block mt-2 text-sm hover:text-brand-amber">administrator@badgerlandproductsinc.com</a>
+            </div>
+             <div>
+                <h4 class="font-bold uppercase tracking-wider">Hours</h4>
+                <p class="mt-2 text-sm">Mon - Fri: 8:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+        <div class="text-center text-xs text-brand-silver/50 mt-12 pt-8 border-t border-brand-purple/20">
+            <p>&copy; <span id="year"></span> Badgerland Products, Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script/script.js"></script>
+</body>
+</html>
